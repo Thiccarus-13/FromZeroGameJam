@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class CameraMovement : MonoBehaviour
     private bool onLevel1 = false;
     private bool onLevel2 = false;
 
+
+    /// <summary>
+    ///  Controls which level the player is currently on
+    /// </summary>
     void Update()
     {
         switch (GameManager.levelsWon)
@@ -33,6 +38,11 @@ public class CameraMovement : MonoBehaviour
                     transform.position = cameraPoints[1].position;
                     onLevel2 = true;
                 }
+                break;
+
+            // TODO - Add more levels later
+            case 3:
+                SceneManager.LoadScene("Game Over");
                 break;
         }
     }

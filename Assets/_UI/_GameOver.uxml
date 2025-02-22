@@ -1,0 +1,15 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="panel" style="flex-grow: 1;">
+        <engine:VisualElement name="container" style="flex-grow: 1;">
+            <engine:Label text="Game Over!" name="Title" style="-unity-text-align: upper-center; font-size: 64px; -unity-font-style: italic;" />
+            <engine:Label text="Credits:" name="Credit_Title" style="-unity-text-align: upper-center; font-size: 53px;" />
+            <engine:VisualElement style="flex-grow: 1; flex-direction: row;">
+                <engine:VisualElement style="flex-grow: 1;" />
+                <engine:Label text="&#10;&#10;Engineers: Christian Anderson &amp; Gabe Eralie&#10;&#10;Artists: Wesley Hatch &amp; Ziyu Shi" name="Credits" selectable="false" style="align-self: auto; justify-content: flex-end; align-items: center; -unity-text-align: upper-center; font-size: 27px;" />
+                <engine:VisualElement style="flex-grow: 1;" />
+            </engine:VisualElement>
+            <engine:Button text="Play Again?" name="Play_Again_Button" style="-unity-font-style: bold-and-italic; font-size: 18px; align-self: center; width: 15%;" />
+            <engine:Button text="Quit" name="Quit_Button" style="font-size: 18px; -unity-font-style: italic; align-self: center; width: 15%;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
