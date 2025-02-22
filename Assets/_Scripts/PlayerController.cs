@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float movementSpeed = 5; // speed of player
     [SerializeField] private Transform movePoint; // Point player moves to 
 
+
     private readonly float movePointDistance = 0.05f;
 
     /// <summary>
@@ -15,7 +16,8 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, movementSpeed * Time.deltaTime);
+
+        this.gameObject.transform.position = Vector3.MoveTowards(transform.position, movePoint.position, movementSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, movePoint.position) <= movePointDistance)
         {
