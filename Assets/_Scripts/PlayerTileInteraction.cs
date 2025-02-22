@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerTileInteraction : MonoBehaviour
 {
-    [SerializeField] private int playerValue;
+    public static int playerValue;
      void Start()
     {
         playerValue = 0;
