@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      coblestone_texture_0: -2529387435576089527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
