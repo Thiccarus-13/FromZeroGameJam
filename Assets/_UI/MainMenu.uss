@@ -1,0 +1,20 @@
+.panel {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.menu {
+    align-items: flex-end;
+    justify-content: flex-end;
+    align-self: auto;
+    align-content: center;
+    bottom: auto;
+    position: relative;
+    flex-direction: column;
+}
+
+.unity-button:hover {
+    background-color: rgb(66, 66, 66);
+    scale: 1.1 1;
+    transition-property: scale;
+    transition-duration: 0.25s;
+}
