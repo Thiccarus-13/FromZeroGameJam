@@ -37,5 +37,15 @@ public class PlayerTileInteraction : MonoBehaviour
         {
             playerValue -= collision.GetComponent<Tile>().tileValue;
         }
+
+        else if (collision.CompareTag("Mult Tile"))
+        {
+            playerValue *= collision.GetComponent<Tile>().tileValue;
+        }
+
+        else if (collision.CompareTag("Div Tile"))
+        {
+            playerValue /= collision.GetComponent<Tile>().tileValue;
+        }
     }
 }
