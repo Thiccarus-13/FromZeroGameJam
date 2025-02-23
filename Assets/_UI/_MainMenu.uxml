@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=1616a19a7279b224d8d7cc4d361a956b&amp;type=3#MainMenu" />
+    <ui:VisualElement name="Panel" class="panel" style="flex-grow: 1;">
+        <ui:Label text="Block Game" name="Title" style="align-items: center; justify-content: flex-end; -unity-text-align: upper-center; font-size: 74px; -unity-font-style: bold-and-italic;" />
+        <ui:VisualElement style="flex-grow: 1; height: 637px;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:Label text="Controls:&#10;Movement - WASD/Arrow keys&#10;Reset Puzzle - R" name="Controls" style="-unity-text-align: upper-center; font-size: 33px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Container" class="menu" style="flex-grow: 1; justify-content: flex-end; align-content: flex-end; align-self: auto; transition-property: scale;">
+            <ui:Button text="Play" name="Play_Button" class="unity-button" style="align-items: center; justify-content: center; align-self: center; align-content: center; width: 15%; font-size: 45px; -unity-font-style: bold-and-italic;" />
+            <ui:Button text="Quit" name="Quit_Button" class="unity-button" style="align-items: center; justify-content: center; align-self: center; align-content: center; width: 15%; font-size: 45px; -unity-font-style: italic;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
