@@ -11,7 +11,6 @@ public class PlayerTileInteraction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log($"Touching {collision.tag}");
-
         if(collision.CompareTag("Win Tile"))
         {
             // Player wins level
@@ -37,6 +36,16 @@ public class PlayerTileInteraction : MonoBehaviour
         else if (collision.CompareTag("Sub Tile"))
         {
             playerValue -= collision.GetComponent<Tile>().tileValue;
+        }
+
+        else if (collision.CompareTag("Mult Tile"))
+        {
+            playerValue *= collision.GetComponent<Tile>().tileValue;
+        }
+
+        else if (collision.CompareTag("Div Tile"))
+        {
+            playerValue /= collision.GetComponent<Tile>().tileValue;
         }
     }
 }

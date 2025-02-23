@@ -398,7 +398,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6b0c71c5e472f4ea9a49fd1784938b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileValue: 1
+  tileValue: 3
   sr: {fileID: 31787593}
 --- !u!61 &31787596
 BoxCollider2D:
@@ -9252,7 +9252,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 822314093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: beda7ae35ccd295408fde23a112c85bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 175b57a353630db45b0d3215c7898737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform movePoint; // Point player moves to 
     [SerializeField] private LayerMask obstacleMask;
 
+
     private readonly float movePointDistance = 0.05f;
 
     private Vector3 currentPosition;
@@ -25,7 +26,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         currentPosition = transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, movePoint.position, movementSpeed * Time.deltaTime);
+        this.gameObject.transform.position = Vector3.MoveTowards(transform.position, movePoint.position, movementSpeed * Time.deltaTime);
 
         if (Vector3.Distance(transform.position, movePoint.position) <= movePointDistance)
         {
