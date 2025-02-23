@@ -35,7 +35,7 @@ public class PlayerTileInteraction : MonoBehaviour
         {
             playerValue += collision.GetComponent<Tile>().tileValue;
             Debug.Log(playerValue);
-            sr.sprite = numbers[Math.Abs(playerValue)];
+            // sr.sprite = numbers[Math.Abs(playerValue)];
         }
 
         // Sub
