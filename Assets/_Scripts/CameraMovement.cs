@@ -131,27 +131,9 @@ public class CameraMovement : MonoBehaviour
                     SetPlayerCameraSpawn(17);
                 }
                 break;
-            case 19:
-                if (levelsWon[18] == false)
-                {
-                    SetPlayerCameraSpawn(18);
-                }
-                break;
-            case 20:
-                if (levelsWon[19] == false)
-                {
-                    SetPlayerCameraSpawn(19);
-                }
-                break;
-            case 21:
-                if (levelsWon[20] == false)
-                {
-                    SetPlayerCameraSpawn(20);
-                }
-                break;
 
             // TODO - Add more levels later
-            case 22:
+            case 19:
                 SceneManager.LoadScene("Game Over");
                 break;
         }

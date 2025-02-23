@@ -22,6 +22,7 @@ public class PlayerTileInteraction : MonoBehaviour
             {
                 Debug.Log("Player wins!");
                 GameManager.levelsWon++;
+                //GameManager.levelsWon = 16;
                 playerValue = 0;
             }
             else
