@@ -8,6 +8,8 @@ TagManager:
   - Plus Tile
   - Sub Tile
   - Tile
+  - Mult Tile
+  - Div Tile
   layers:
   - Default
   - TransparentFX
