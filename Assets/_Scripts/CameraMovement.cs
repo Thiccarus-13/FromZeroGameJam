@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
 
     private bool[] levelsWon = new bool[20];
     [SerializeField] private Sprite zeroSprite;
-
+    [SerializeField] private PlayerChildSprite childSprite;
 
     /// <summary>
     ///  Controls which level the player is currently on
@@ -145,6 +145,7 @@ public class CameraMovement : MonoBehaviour
         playerMovePoint.transform.position = playerSpawns[newPoint].transform.position;
         transform.position = cameraPoints[newPoint].position;
         levelsWon[newPoint] = true;
-        player.GetComponent<SpriteRenderer>().sprite = zeroSprite;
+        PlayerTileInteraction pti = player.GetComponent<PlayerTileInteraction>();
+        pti.setPlayerValue(0);
     }
 }
