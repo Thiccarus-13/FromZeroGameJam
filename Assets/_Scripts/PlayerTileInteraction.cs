@@ -67,6 +67,18 @@ public class PlayerTileInteraction : MonoBehaviour
         {
             sr.sprite = negNumbers[Math.Abs(playerValue) - 1];
         }
+        else if (playerValue > 10)
+        {
+            int rightDigit = playerValue;
+            while (rightDigit >= 10) {rightDigit -= 10;}
+            int leftDigit = playerValue - rightDigit;
+        }
+        else if (playerValue < -10)
+        {
+            int rightDigit = playerValue;
+            while (rightDigit <= -10){rightDigit += 10;}
+            int leftDigit = playerValue - rightDigit;
+        }
         else
         {
             sr.sprite = zero;
