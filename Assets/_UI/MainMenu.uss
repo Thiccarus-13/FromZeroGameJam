@@ -18,3 +18,7 @@
     transition-property: scale;
     transition-duration: 0.25s;
 }
+
+.image {
+    background-image: url("project://database/Assets/_Art/_UI/title_screen.png?fileID=2800000&guid=b0607ddeb7645254a9b313f6717edc89&type=3#title_screen");
+}

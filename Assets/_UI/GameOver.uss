@@ -1,0 +1,3 @@
+.image {
+    background-image: url("project://database/Assets/_Art/_UI/gameover.png?fileID=2800000&guid=9789f3061260dd24b9ef97eb9dc06cf1&type=3#gameover");
+}

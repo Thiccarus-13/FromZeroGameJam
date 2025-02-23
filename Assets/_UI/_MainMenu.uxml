@@ -1,15 +1,14 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/_UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=1616a19a7279b224d8d7cc4d361a956b&amp;type=3#MainMenu" />
-    <ui:VisualElement name="Panel" class="panel" style="flex-grow: 1;">
+    <ui:VisualElement name="Panel" class="panel image" style="flex-grow: 1;">
         <ui:Label text="Block Game" name="Title" style="align-items: center; justify-content: flex-end; -unity-text-align: upper-center; font-size: 74px; -unity-font-style: bold-and-italic;" />
-        <ui:VisualElement style="flex-grow: 1; height: 637px;" />
-        <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-            <ui:VisualElement style="flex-grow: 1;" />
-            <ui:Label text="Controls:&#10;Movement - WASD/Arrow keys&#10;Reset Puzzle - R" name="Controls" style="-unity-text-align: upper-center; font-size: 33px;" />
+        <ui:VisualElement style="flex-grow: 1; flex-direction: column;">
+            <ui:Label text="Controls:&#10;Movement - WASD/Arrow keys&#10;Reset Puzzle - R" name="Controls" style="-unity-text-align: upper-center; font-size: 33px; flex-direction: column;" />
         </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; height: 637px;" />
         <ui:VisualElement name="Container" class="menu" style="flex-grow: 1; justify-content: flex-end; align-content: flex-end; align-self: auto; transition-property: scale;">
-            <ui:Button text="Play" name="Play_Button" class="unity-button" style="align-items: center; justify-content: center; align-self: center; align-content: center; width: 15%; font-size: 45px; -unity-font-style: bold-and-italic;" />
-            <ui:Button text="Quit" name="Quit_Button" class="unity-button" style="align-items: center; justify-content: center; align-self: center; align-content: center; width: 15%; font-size: 45px; -unity-font-style: italic;" />
+            <ui:Button name="Play_Button" icon-image="project://database/Assets/_Art/_UI/start_button2.png?fileID=2800000&amp;guid=a3fd49b261506d144bbb556bfc783a85&amp;type=3#start_button2" parse-escape-sequences="true" class="unity-button" style="align-items: center; justify-content: center; align-self: center; align-content: center; width: 301px; font-size: 42px; -unity-font-style: bold-and-italic; background-color: rgba(188, 188, 188, 0); height: 159px; background-size: 0 0; transform-origin: left top; scale: 1 1;" />
+            <ui:Button name="Quit_Button" icon-image="project://database/Assets/_Art/_UI/quit_button.png?fileID=2800000&amp;guid=39051fd67cf702545852063568a41814&amp;type=3#quit_button" parse-escape-sequences="true" class="unity-button" style="align-items: center; justify-content: center; align-self: center; align-content: center; width: 301px; font-size: 42px; -unity-font-style: bold-and-italic; background-color: rgba(188, 188, 188, 0); height: 160px; background-size: 0 0; transform-origin: left top; scale: 1 1;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

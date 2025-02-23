@@ -1,15 +1,21 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:VisualElement name="panel" style="flex-grow: 1;">
+    <Style src="project://database/Assets/_UI/GameOver.uss?fileID=7433441132597879392&amp;guid=6c66def99643c22499d75ba50ab5ff27&amp;type=3#GameOver" />
+    <engine:VisualElement name="panel" class="image" style="flex-grow: 1;">
         <engine:VisualElement name="container" style="flex-grow: 1;">
-            <engine:Label text="Game Over!" name="Title" style="-unity-text-align: upper-center; font-size: 64px; -unity-font-style: italic;" />
-            <engine:Label text="Credits:" name="Credit_Title" style="-unity-text-align: upper-center; font-size: 53px;" />
-            <engine:VisualElement style="flex-grow: 1; flex-direction: row;">
-                <engine:VisualElement style="flex-grow: 1;" />
-                <engine:Label text="&#10;&#10;Engineers: Christian Anderson &amp; Gabe Eralie&#10;&#10;Artists: Wesley Hatch &amp; Ziyu Shi" name="Credits" selectable="false" style="align-self: auto; justify-content: flex-end; align-items: center; -unity-text-align: upper-center; font-size: 27px;" />
-                <engine:VisualElement style="flex-grow: 1;" />
+            <engine:VisualElement style="flex-grow: 1;" />
+            <engine:VisualElement style="flex-grow: 1; flex-direction: column;">
+                <engine:VisualElement style="flex-grow: 1; height: 256px;" />
+                <engine:VisualElement style="flex-grow: 1; height: 151px;" />
+                <engine:VisualElement style="flex-grow: 1; flex-direction: row;">
+                    <engine:Label text="Credits:" name="Credit_Title" display-tooltip-when-elided="false" style="-unity-text-align: upper-center; font-size: 35px; -unity-font-style: bold-and-italic; width: 162px; height: 269px;" />
+                    <engine:VisualElement style="flex-grow: 1; flex-direction: row;">
+                        <engine:Label text="&#10;&#10;Engineers: Christian Anderson &amp; Gabe Eralie&#10;&#10;Artists: Wesley Hatch &amp; Ziyu Shi&#10;&#10;Level Designers: Wesley Hatch &amp; Connor Walton" name="Credits" selectable="false" style="align-self: auto; justify-content: flex-end; align-items: center; -unity-text-align: upper-center; font-size: 24px;" />
+                        <engine:VisualElement style="flex-grow: 1;" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
             </engine:VisualElement>
-            <engine:Button text="Play Again?" name="Play_Again_Button" style="-unity-font-style: bold-and-italic; font-size: 18px; align-self: center; width: 15%;" />
-            <engine:Button text="Quit" name="Quit_Button" style="font-size: 18px; -unity-font-style: italic; align-self: center; width: 15%;" />
+            <engine:Button name="Play_Again_Button" icon-image="project://database/Assets/_Art/_UI/start_button2.png?fileID=2800000&amp;guid=a3fd49b261506d144bbb556bfc783a85&amp;type=3#start_button2" style="-unity-font-style: bold-and-italic; font-size: 18px; align-self: center; width: 137px; background-color: rgba(188, 188, 188, 0); height: 75px;" />
+            <engine:Button name="Quit_Button" icon-image="project://database/Assets/_Art/_UI/quit_button.png?fileID=2800000&amp;guid=39051fd67cf702545852063568a41814&amp;type=3#quit_button" style="font-size: 18px; -unity-font-style: italic; align-self: center; width: 137px; background-color: rgba(188, 188, 188, 0); height: 75px;" />
         </engine:VisualElement>
     </engine:VisualElement>
 </engine:UXML>
