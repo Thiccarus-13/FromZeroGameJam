@@ -1,11 +1,15 @@
+using System;
 using UnityEngine;
 
 public class PlayerTileInteraction : MonoBehaviour
 {
-    [SerializeField] public static int playerValue;
+    public static int playerValue;
+    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private Sprite[] numbers;
      void Start()
     {
         playerValue = 0;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,12 +34,16 @@ public class PlayerTileInteraction : MonoBehaviour
         else if (collision.CompareTag("Plus Tile"))
         {
             playerValue += collision.GetComponent<Tile>().tileValue;
+            Debug.Log(playerValue);
+            sr.sprite = numbers[Math.Abs(playerValue)];
         }
 
         // Sub
         else if (collision.CompareTag("Sub Tile"))
         {
             playerValue -= collision.GetComponent<Tile>().tileValue;
+            Debug.Log(playerValue);
+            sr.sprite = numbers[Math.Abs(playerValue)];
         }
 
         else if (collision.CompareTag("Mult Tile"))

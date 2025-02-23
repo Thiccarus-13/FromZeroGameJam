@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class CameraMovement : MonoBehaviour
 
     private bool onLevel1 = false;
     private bool onLevel2 = false;
+    [SerializeField] private Sprite[] numbers;
 
 
     /// <summary>
@@ -28,6 +30,8 @@ public class CameraMovement : MonoBehaviour
                     playerMovePoint.transform.position = playerSpawns[0].transform.position;
                     transform.position = cameraPoints[0].position;
                     onLevel1 = true;
+
+                    player.GetComponent<SpriteRenderer>().sprite = numbers[Math.Abs(PlayerTileInteraction.playerValue)];
                 }
                 break;
             case 2:
@@ -37,6 +41,8 @@ public class CameraMovement : MonoBehaviour
                     playerMovePoint.transform.position = playerSpawns[1].transform.position;
                     transform.position = cameraPoints[1].position;
                     onLevel2 = true;
+                    player.GetComponent<SpriteRenderer>().sprite = numbers[Math.Abs(PlayerTileInteraction.playerValue)];
+
                 }
                 break;
 
