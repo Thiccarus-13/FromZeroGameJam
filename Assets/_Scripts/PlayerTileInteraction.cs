@@ -6,7 +6,7 @@ public class PlayerTileInteraction : MonoBehaviour
     public static int playerValue;
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Sprite[] numbers;
-     void Start()
+    void Start()
     {
         playerValue = 0;
         sr = GetComponent<SpriteRenderer>();
@@ -15,10 +15,10 @@ public class PlayerTileInteraction : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log($"Touching {collision.tag}");
-        if(collision.CompareTag("Win Tile"))
+        if (collision.CompareTag("Win Tile"))
         {
             // Player wins level
-            if(playerValue == collision.GetComponent<Tile>().tileValue)
+            if (playerValue == collision.GetComponent<Tile>().tileValue)
             {
                 Debug.Log("Player wins!");
                 GameManager.levelsWon++;
@@ -44,7 +44,7 @@ public class PlayerTileInteraction : MonoBehaviour
         {
             playerValue -= collision.GetComponent<Tile>().tileValue;
             Debug.Log(playerValue);
-           // sr.sprite = numbers[Math.Abs(playerValue)];
+            // sr.sprite = numbers[Math.Abs(playerValue)];
         }
 
         else if (collision.CompareTag("Mult Tile"))
