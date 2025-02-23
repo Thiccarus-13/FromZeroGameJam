@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] private GameObject[] playerSpawns;
 
     private bool[] levelsWon = new bool[20];
-    [SerializeField] private Sprite[] numbers;
+    [SerializeField] private Sprite zeroSprite;
 
 
     /// <summary>
@@ -145,7 +145,6 @@ public class CameraMovement : MonoBehaviour
         playerMovePoint.transform.position = playerSpawns[newPoint].transform.position;
         transform.position = cameraPoints[newPoint].position;
         levelsWon[newPoint] = true;
-        player.GetComponent<SpriteRenderer>().sprite = numbers[Math.Abs(PlayerTileInteraction.playerValue)];
-
+        player.GetComponent<SpriteRenderer>().sprite = zeroSprite;
     }
 }

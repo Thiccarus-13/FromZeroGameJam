@@ -5,7 +5,9 @@ public class PlayerTileInteraction : MonoBehaviour
 {
     public static int playerValue;
     [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private Sprite[] numbers;
+    [SerializeField] private Sprite[] posNumbers;
+    [SerializeField] private Sprite[] negNumbers;
+    [SerializeField] private Sprite zero;
     void Start()
     {
         playerValue = 0;
@@ -22,7 +24,6 @@ public class PlayerTileInteraction : MonoBehaviour
             {
                 Debug.Log("Player wins!");
                 GameManager.levelsWon++;
-                //GameManager.levelsWon = 16;
                 playerValue = 0;
             }
             else
@@ -31,30 +32,44 @@ public class PlayerTileInteraction : MonoBehaviour
             }
         }
 
-        // Plus
         else if (collision.CompareTag("Plus Tile"))
         {
             playerValue += collision.GetComponent<Tile>().tileValue;
-            Debug.Log(playerValue);
-            // sr.sprite = numbers[Math.Abs(playerValue)];
+            UpdateSprite();
         }
 
-        // Sub
         else if (collision.CompareTag("Sub Tile"))
         {
             playerValue -= collision.GetComponent<Tile>().tileValue;
-            Debug.Log(playerValue);
-            // sr.sprite = numbers[Math.Abs(playerValue)];
+            UpdateSprite();
         }
 
         else if (collision.CompareTag("Mult Tile"))
         {
             playerValue *= collision.GetComponent<Tile>().tileValue;
+            UpdateSprite();
         }
 
         else if (collision.CompareTag("Div Tile"))
         {
             playerValue /= collision.GetComponent<Tile>().tileValue;
+            UpdateSprite();
+        }
+    }
+
+    private void UpdateSprite()
+    {
+        if (playerValue > 0 && playerValue < 10)
+        {
+            sr.sprite = posNumbers[playerValue - 1];
+        }
+        else if (playerValue < 0 && playerValue > -10)
+        {
+            sr.sprite = negNumbers[Math.Abs(playerValue) - 1];
+        }
+        else
+        {
+            sr.sprite = zero;
         }
     }
 }

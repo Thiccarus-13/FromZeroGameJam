@@ -6001,10 +6001,7 @@ MonoBehaviour:
   - {fileID: 1760431494}
   - {fileID: 657302056}
   - {fileID: 1077787338}
-  numbers:
-  - {fileID: 21300000, guid: 56bc5fb8c20d76142b830dc339c4aea5, type: 3}
-  - {fileID: 7870061553638343665, guid: d6624506a47508047960462a6ffae184, type: 3}
-  - {fileID: -958423412009189342, guid: a4cf29069e784bf4b8efa1088fb01a8e, type: 3}
+  zeroSprite: {fileID: 21300000, guid: 56bc5fb8c20d76142b830dc339c4aea5, type: 3}
 --- !u!1 &227718687
 GameObject:
   m_ObjectHideFlags: 0
@@ -8127,7 +8124,7 @@ MonoBehaviour:
   player:
   - {fileID: 822314093}
   - {fileID: 1519599517}
-  defaultSprite: {fileID: -1017775659657013762, guid: 576b72483cd061d47a573523cc449b88, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 56bc5fb8c20d76142b830dc339c4aea5, type: 3}
 --- !u!1 &342336958
 GameObject:
   m_ObjectHideFlags: 0
@@ -25626,7 +25623,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 56bc5fb8c20d76142b830dc339c4aea5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -25729,10 +25726,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sr: {fileID: 822314094}
-  numbers:
-  - {fileID: -1017775659657013762, guid: 576b72483cd061d47a573523cc449b88, type: 3}
-  - {fileID: 7870061553638343665, guid: d6624506a47508047960462a6ffae184, type: 3}
-  - {fileID: -958423412009189342, guid: a4cf29069e784bf4b8efa1088fb01a8e, type: 3}
+  posNumbers:
+  - {fileID: 21300000, guid: 313409587bcd47b40b9fa4ddf754a3b1, type: 3}
+  - {fileID: 21300000, guid: 16c12affe4d53e246b61293d3a122889, type: 3}
+  - {fileID: 21300000, guid: 908e9df3c309dbd4ca34e6a826ff2dce, type: 3}
+  - {fileID: 21300000, guid: 40528fc3b1499074e857c8317e91134b, type: 3}
+  - {fileID: 21300000, guid: ae5d3afdf08a9a34c87c3fc951132c08, type: 3}
+  - {fileID: 21300000, guid: c1da59d5e72299040a7767f5fbffb347, type: 3}
+  - {fileID: 21300000, guid: f8c6692371eded844bb81d340f502dea, type: 3}
+  - {fileID: 21300000, guid: 6e02c4948d6d1da42bcee5669cb59c22, type: 3}
+  - {fileID: 21300000, guid: 18f2f1b6737324848b3cd7a9d31e2ae9, type: 3}
+  negNumbers:
+  - {fileID: 21300000, guid: 46fbeed50c686104fb8a0b84dc1db4c6, type: 3}
+  - {fileID: 21300000, guid: 2a8546885f805414b910bd6cd9e417d1, type: 3}
+  - {fileID: 21300000, guid: 77496fae8199ec14fab1ae3331112ab8, type: 3}
+  - {fileID: 21300000, guid: a53c43fe3cd07c84b9afc4291a2046e2, type: 3}
+  - {fileID: 21300000, guid: 78616b3dac5b81742a639658f0b25a84, type: 3}
+  - {fileID: 21300000, guid: 35b0bd9e1efa8dd47837bc823a1bb6d8, type: 3}
+  - {fileID: 21300000, guid: 4a86e6d6d9036774aae1b18110f36529, type: 3}
+  - {fileID: 21300000, guid: 3eee0efc820ee4448ac9d99c08212b8c, type: 3}
+  - {fileID: 21300000, guid: 79ea7f20c7e325c419382ccad7a30775, type: 3}
+  zero: {fileID: 21300000, guid: 56bc5fb8c20d76142b830dc339c4aea5, type: 3}
 --- !u!50 &822314099
 Rigidbody2D:
   serializedVersion: 5
