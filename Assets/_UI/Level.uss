@@ -1,0 +1,8 @@
+.image {
+    background-image: url("project://database/Assets/_Art/_Background/patterned.png?fileID=2800000&guid=9c7f93041f470574eb7f3a3f41b15c57&type=3#patterned");
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: no-repeat repeat;
+    background-position-x: right 0;
+    background-position-y: bottom 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
