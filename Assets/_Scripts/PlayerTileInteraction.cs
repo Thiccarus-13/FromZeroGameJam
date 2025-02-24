@@ -72,7 +72,7 @@ public class PlayerTileInteraction : MonoBehaviour
         }
         else if (playerValue < 0 && playerValue > -10)
         {
-            sr.sprite = negNumbers[Math.Abs(playerValue) - ];
+            sr.sprite = negNumbers[Math.Abs(playerValue) - 1];
             sprite1.setDisplayMode("Single");
             sprite2.setDisplayMode("None");
         }
