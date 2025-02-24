@@ -29,6 +29,7 @@ public class PlayerTileInteraction : MonoBehaviour
                 Debug.Log("Player wins!");
                 GameManager.levelsWon++;
                 playerValue = 0;
+                UpdateSprite();
             }
             else
             {
@@ -76,7 +77,7 @@ public class PlayerTileInteraction : MonoBehaviour
             sprite1.setDisplayMode("Single");
             sprite2.setDisplayMode("None");
         }
-        else if (playerValue > 10)
+        else if (playerValue >= 10)
         {
             int rightDigit = playerValue;
             while (rightDigit > 10) {rightDigit -= 10;}
@@ -99,7 +100,7 @@ public class PlayerTileInteraction : MonoBehaviour
             // This puts sprite2 next to sprite1. 
             sprite2.transform.localPosition = new Vector3(sprite1.GetComponent<SpriteRenderer>().bounds.size.x, 0f, 0f);
         }
-        else if (playerValue < -10)
+        else if (playerValue <= -10)
         {
             int rightDigit = playerValue;
             while (rightDigit < -10){rightDigit += 10;}
@@ -120,7 +121,7 @@ public class PlayerTileInteraction : MonoBehaviour
         }
         else
         {
-            sprite1.sr.sprite = zero;
+            sr.sprite = zero;
             sprite1.setDisplayMode("Single");
             sprite2.setDisplayMode("None");
         }
