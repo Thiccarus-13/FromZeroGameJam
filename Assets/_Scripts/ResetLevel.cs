@@ -21,6 +21,7 @@ public class ResetLevel : MonoBehaviour
     private void ResetPlayerSprite()
     {
         player[0].GetComponent<SpriteRenderer>().sprite = defaultSprite;
+        player[0].GetComponent<PlayerTileInteraction>().setPlayerValue(0);
     }
 
     private void MovePlayer(int position)

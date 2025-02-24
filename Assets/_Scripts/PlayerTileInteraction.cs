@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerTileInteraction : MonoBehaviour
 {
     public static int playerValue;  
+    [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Sprite[] posNumbers;
     [SerializeField] private Sprite[] negNumbers;
     [SerializeField] private Sprite zero;
@@ -65,49 +66,55 @@ public class PlayerTileInteraction : MonoBehaviour
         Debug.Log("Updating Sprite");
         if (playerValue > 0 && playerValue < 10)
         {
-            sprite1.sr.sprite = posNumbers[playerValue - 1];
+            sr.sprite = posNumbers[playerValue - 1];
             sprite1.setDisplayMode("Single");
             sprite2.setDisplayMode("None");
-
-            sprite1.transform.localPosition = Vector3.zero;
         }
         else if (playerValue < 0 && playerValue > -10)
         {
-            sprite1.sr.sprite = negNumbers[Math.Abs(playerValue - 1)];
+            sr.sprite = negNumbers[Math.Abs(playerValue) - ];
             sprite1.setDisplayMode("Single");
             sprite2.setDisplayMode("None");
-            sprite1.transform.localPosition = Vector3.zero;
         }
         else if (playerValue > 10)
         {
             int rightDigit = playerValue;
-            while (rightDigit >= 10) {rightDigit -= 10;}
+            while (rightDigit > 10) {rightDigit -= 10;}
             int leftDigit = playerValue - rightDigit;
             leftDigit /= 10;
 
 
             sprite1.sr.sprite = posNumbers[leftDigit - 1];
             sprite1.setDisplayMode("Double");
+            if (rightDigit == 0)
+            {
+                sprite2.sr.sprite = zero;
+            }
+            else
+            {
             sprite2.sr.sprite = posNumbers[rightDigit - 1];
+            }
             sprite2.setDisplayMode("Double");
 
-            sprite1.transform.localPosition = transform.localPosition;
             // This puts sprite2 next to sprite1. 
             sprite2.transform.localPosition = new Vector3(sprite1.GetComponent<SpriteRenderer>().bounds.size.x, 0f, 0f);
         }
         else if (playerValue < -10)
         {
             int rightDigit = playerValue;
-            while (rightDigit <= -10){rightDigit += 10;}
+            while (rightDigit < -10){rightDigit += 10;}
             int leftDigit = playerValue - rightDigit;
             leftDigit /= 10;
 
 
             sprite1.sr.sprite = negNumbers[Math.Abs(leftDigit) - 1];
             sprite1.setDisplayMode("Double");
+            if(rightDigit == 0){
+                sprite2.sr.sprite = zero;
+            }else{
             sprite2.sr.sprite = negNumbers[Math.Abs(rightDigit) - 1];
+            }
             sprite2.setDisplayMode("Double");
-            sprite1.transform.localPosition = transform.localPosition;
             // This puts sprite2 next to sprite1. 
             sprite2.transform.localPosition = new Vector3(sprite1.GetComponent<SpriteRenderer>().bounds.size.x, 0f, 0f);
         }
@@ -117,6 +124,7 @@ public class PlayerTileInteraction : MonoBehaviour
             sprite1.setDisplayMode("Single");
             sprite2.setDisplayMode("None");
         }
+        sprite1.sr.sortingOrder = 6;
     }
 
     public void setPlayerValue(int newVal){

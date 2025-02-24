@@ -8,7 +8,6 @@ public class PlayerChildSprite : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
         fullScale = transform.localScale;
     }
 
